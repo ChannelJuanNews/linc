@@ -8,8 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "cirrus-ui": "^0.6.1",
+    "cookie": "^0.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.15",
     "next": "^10.0.0",
+    "next-auth": "^3.2.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "wingcss": "^1.0.0-beta"
