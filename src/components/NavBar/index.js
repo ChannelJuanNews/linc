@@ -7,5 +7,5 @@ export default function NavBar() {
 
   console.log("global state is navbar is", globalState);
 
-  return <div> </div>;
+  return <div className="navbar"> NAVBAR </div>;
 }

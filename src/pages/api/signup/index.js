@@ -1,6 +1,12 @@
 import cookie from "cookie";
 import User from "@/models/user";
 
+async function signup({ username, email, password }) {
+  return new Promise(async (resolve, reject) => {
+    const newUser = new User.model();
+  });
+}
+
 export default async (req, res) => {
   console.log("asdfasdfsdf", req.method);
   switch (req.method) {

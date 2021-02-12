@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 import crypto from "crypto";
 
+import { schema as LinkSchema } from "./link";
+
 let UserSchema = mongoose.Schema({
   email: {
     type: String,
@@ -39,16 +41,15 @@ let UserSchema = mongoose.Schema({
     type: String,
   },
 
-  verified_email : {
-      type : Boolean, 
-      default : false, 
-  }, 
+  verified_email: {
+    type: Boolean,
+    default: false,
+  },
 
-  verified : {
-      type : Boolean, 
-      default false, 
-  }
-
+  verified: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 UserSchema.methods.setPassword = function (password) {

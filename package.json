@@ -5,7 +5,31 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
+  },
+  "jest": {
+    "modulePaths": [
+      "<rootDir>/src"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "src"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+      "^@/components(.*)$": "<rootDir>/src/components/$1",
+      "^@/util(.*)$": "<rootDir>/src/util/$1"
+    }
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -13,10 +37,19 @@
     "cookie": "^0.4.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.15",
+    "msw": "^0.26.2",
     "next": "^10.0.0",
     "next-auth": "^3.2.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "wingcss": "^1.0.0-beta"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^7.29.4",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "jest-dom": "^4.0.0"
   }
 }
